@@ -23,169 +23,213 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgb(56, 149, 27);</string>
+   <string notr="true">background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.785, fx:0.5, fy:0.5, stop:0 rgba(56, 186, 199, 1), stop:1 rgba(50, 74, 86, 1));
+</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>341</width>
-      <height>611</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="GamePage">
-     <widget class="QPushButton" name="pillButton">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>230</y>
-        <width>181</width>
-        <height>181</height>
-       </rect>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="resources.qrc">
-        <normaloff>:/Materials/Pill.svg</normaloff>:/Materials/Pill.svg</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>150</width>
-        <height>150</height>
-       </size>
-      </property>
-      <property name="flat">
-       <bool>true</bool>
-      </property>
+      <widget class="QWidget" name="GamePage">
+       <widget class="QPushButton" name="pillButton">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>230</y>
+          <width>181</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Materials/Pill.svg</normaloff>:/Materials/Pill.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="counterLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>341</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI Light</family>
+          <pointsize>30</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="stepLabel">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>440</y>
+          <width>221</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI Light</family>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+color: white;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>+1</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="indent">
+         <number>-1</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="openUpgradesButton">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>560</y>
+          <width>50</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Materials/Upgrades.svg</normaloff>:/Materials/Upgrades.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="UpgradesPage">
+       <widget class="QPushButton" name="fromUpgradesToGameButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>50</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Materials/ToGame.svg</normaloff>:/Materials/ToGame.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>20</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+color: white;</string>
+        </property>
+        <property name="text">
+         <string>PowerUp Store</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QListView" name="listView">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>110</y>
+          <width>256</width>
+          <height>351</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
      </widget>
-     <widget class="QLabel" name="counterLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>341</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe UI Light</family>
-        <pointsize>30</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: white;</string>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="stepLabel">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>440</y>
-        <width>221</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe UI Light</family>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: white;</string>
-      </property>
-      <property name="text">
-       <string>+1</string>
-      </property>
-      <property name="scaledContents">
-       <bool>false</bool>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="indent">
-       <number>-1</number>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="openUpgradesButton">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>560</y>
-        <width>50</width>
-        <height>50</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="resources.qrc">
-        <normaloff>:/Materials/Upgrades.svg</normaloff>:/Materials/Upgrades.svg</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>60</width>
-        <height>60</height>
-       </size>
-      </property>
-      <property name="flat">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="UpgradesPage">
-     <widget class="QPushButton" name="fromUpgradesToGameButton">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>50</width>
-        <height>50</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{background: none; background-color: transparent; border:none;}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="resources.qrc">
-        <normaloff>:/Materials/ToGame.svg</normaloff>:/Materials/ToGame.svg</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>50</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="flat">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
