@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Materials/Pill.svg</file>
+        <file>Materials/Pill.png</file>
     </qresource>
 </RCC>
