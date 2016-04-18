@@ -22,8 +22,13 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-private:
+    void on_pushButton_pressed();
+
+    void on_pushButton_released();
+
+    private:
     Ui::MainWindow *ui;
+    int pillSize;
 
     double count;
     double step;

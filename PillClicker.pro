@@ -23,5 +23,6 @@ CONFIG += mobility
 MOBILITY = 
 
 RESOURCES += \
+    resources.qrc \
     resources.qrc
 

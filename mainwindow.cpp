@@ -11,14 +11,18 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // установка размеров кнопки
+    pillSize = geometry().width() / 2;
+    ui->pushButton->resize(pillSize, pillSize);
+    ui->pushButton->setIconSize(QSize(pillSize, pillSize));
+
     // центрирование кнопки
-    QRect widgetGeometry = ui->pushButton->geometry();
-    QPoint center((geometry().width() - widgetGeometry.width()) / 2,
-                  (geometry().height() - widgetGeometry.height()) / 2);
+    QPoint center((geometry().width() - pillSize) / 2,
+                  (geometry().height() - pillSize) / 2);
     ui->pushButton->move(center);
 
     // центрирование счетчика
-    widgetGeometry = ui->label->geometry();
+    QRect widgetGeometry = ui->label->geometry();
     center = QPoint((geometry().width() - widgetGeometry.width()) / 2,
                     (ui->pushButton->geometry().y() - widgetGeometry.height()) / 2);
     ui->label->move(center);
@@ -47,4 +51,14 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked() {
     count += step;
     ui->label->setText(QString::number(count));
+}
+
+
+void MainWindow::on_pushButton_pressed() {
+    ui->pushButton->setIconSize(QSize(pillSize / 2, pillSize));
+}
+
+
+void MainWindow::on_pushButton_released() {
+    ui->pushButton->setIconSize(QSize(pillSize, pillSize));
 }

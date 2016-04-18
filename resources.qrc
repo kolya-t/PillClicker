@@ -1,8 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>Materials/Med.png</file>
-        <file>Materials/Med.svg</file>
-        <file>Materials/Pill.png</file>
-        <file>Pill.svg</file>
+        <file>Materials/Pill.svg</file>
     </qresource>
 </RCC>
