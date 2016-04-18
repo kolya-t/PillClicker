@@ -39,6 +39,18 @@ private slots:
     void on_pillButton_released();
 
     void nullMultiplier();
+    void on_openUpgradesButton_clicked();
+
+    void on_fromUpgradesToGameButton_clicked();
+
+    void on_fromUpgradesToGameButton_pressed();
+
+    void on_fromUpgradesToGameButton_released();
+
+    void on_openUpgradesButton_pressed();
+
+    void on_openUpgradesButton_released();
+
 private:
     Ui::MainWindow *ui;
     // размер кнопки в пикселях

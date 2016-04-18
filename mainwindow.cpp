@@ -14,11 +14,12 @@ MainWindow::MainWindow(QWidget *parent) :
     /*----------------УСТАНОВКА ИНТЕРФЕЙСА-НАЧАЛО-------------------*/
     ui->setupUi(this);
     nullMultiplier();
+    setCentralWidget(ui->stackedWidget);
     /* размеры приложения */
     // на десктопе
     QRect screenGeometry = geometry();
     // на андроиде
-//    QRect screenGeometry = qApp->desktop()->availableGeometry(ui->pushButton);
+//    QRect screenGeometry = qApp->desktop()->availableGeometry(ui->pillButton);
 
     // установка размеров кнопки
     _pillSize = screenGeometry.width() / 2;
@@ -92,4 +93,28 @@ void MainWindow::nullMultiplier() {
     _clicksCount = 0;
     _multiplier = 1;
     ui->stepLabel->setText("");
+}
+
+void MainWindow::on_openUpgradesButton_clicked() {
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_fromUpgradesToGameButton_clicked() {
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_fromUpgradesToGameButton_pressed() {
+    ui->fromUpgradesToGameButton->setIconSize(QSize(45, 50));
+}
+
+void MainWindow::on_fromUpgradesToGameButton_released() {
+    ui->fromUpgradesToGameButton->setIconSize(QSize(50, 50));
+}
+
+void MainWindow::on_openUpgradesButton_pressed() {
+    ui->openUpgradesButton->setIconSize(QSize(45, 50));
+}
+
+void MainWindow::on_openUpgradesButton_released() {
+    ui->openUpgradesButton->setIconSize(QSize(50, 50));
 }

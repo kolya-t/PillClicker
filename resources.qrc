@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>Materials/Pill.svg</file>
         <file>Materials/Pill.png</file>
+        <file>Materials/ToGame.svg</file>
+        <file>Materials/Upgrades.svg</file>
     </qresource>
 </RCC>
